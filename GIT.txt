@@ -1,0 +1,71 @@
+What is GIT VS GITHUB ?
+
+How to raise a PR Request?
+--If it’s your project: you probably already have it cloned.
+ >>git clone https://github.com/your-username/repo-name.git
+ --Create a New Branch
+ >>git checkout -b my-feature-branch
+--Make Your Changes
+>>git add .
+git commit -m "Add feature XYZ / Fix bug ABC"
+--Push Your Branch
+>>git push origin my-feature-branch
+--Create the Pull Request
+>>Go to the repo on GitHub.
+>>You’ll see a “Compare & pull request” button — click it.
+  >>Or go to the Pull Requests tab > New pull request.
+>>Base branch: where you want to merge (e.g., main).
+>>Compare branch: your feature branch.
+>>Add: A title and description of what you did.
+  >>Link issues if any (Fixes #123).
+
+  >>Click Create pull request.
+
+how to resolve merge conflict in git ?
+A merge conflict happens when two branches have changes in the same part of a file, and Git doesn’t know which one to keep.
+there will be 3 opions 1. accept current changes 2 . accept incoming changes 3. accept both changes
+or 
+# Check conflicts
+git status
+
+# Open & edit files to resolve conflicts
+# Remove conflict markers <<<<<<< ======= >>>>>>>
+
+# Add resolved files
+git add <file>
+
+# Complete the merge
+git commit
+
+what is merge and rebase ?
+git merge takes the changes from one branch and combines them into another branch.
+   //It creates a new merge commit, which keeps the full branch history with all diverging paths.
+git rebase moves your commits on top of another branch, 
+   //rewriting the commit history to look like you built your changes directly off the latest branch.
+>>When to use merge
+✅ To combine finished feature branches into main or develop.
+✅ To preserve full history of how changes evolved.
+✅ When teamwork needs an audit trail of who branched when.
+✅ Safe for shared branches — no rewrite.
+>>When to use rebase
+✅ To keep history linear & clean — so git log is easier to read.
+✅ To update your feature branch with the latest main before merging:
+bash
+Copy
+Edit
+git checkout feature
+git pull --rebase origin main
+✅ When working solo on your branch — rebase before opening a PR.
+⚠️ Don’t rebase shared branches (you’ll rewrite other people’s commits).
+
+>>git  fetch vs pull
+>> Difference between origin/main and main
+>>Difference between revert and reset?
+>>How do you squash commits?
+>>What’s the difference between origin and upstream?
+>>what is Stash In git
+
+
+
+
+
