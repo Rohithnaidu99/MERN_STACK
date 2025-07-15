@@ -64,6 +64,7 @@ git pull --rebase origin main
 >>How do you squash commits?
 >>What’s the difference between origin and upstream?
 >>what is Stash In git
+>>how to review PR ?
 
 
 
